@@ -7,9 +7,9 @@ import copy
 
 custom_cmap = LinearSegmentedColormap.from_list("custom", ["white", "black", "red"])
 
-WIDTH = 600
-HEIGHT = 600
-seed_num = 20
+WIDTH = 100
+HEIGHT = 100
+seed_num = 3
 
 speed_min = 2
 speed_max = 3
@@ -106,7 +106,6 @@ while not old_img == new_img:
     frame += 1
     old_img = new_img
     new_img = generate_next_frame(old_img, frame)
-    print(frame)
 
 plot_image(new_img)
 
